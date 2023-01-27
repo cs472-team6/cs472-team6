@@ -45,19 +45,16 @@ def getCommitData(filename, commits):
         print("Error receiving data")
         exit(0)
         
-def getAuthorData(authorData):
-  with open(filePath) as csvfile: 
-    reader = csv.reader(csvfile)
-    next(reader)
-    for row in reader:
-      getCommitData(row[0], authorData)
-
-filePath = "repo_mining\alex_data\file_rootbeer.csv"
+filePath = "/content/data/file_rootbeer.csv"
 repo = 'scottyab/rootbeer'
 lsttokens = [""]
 authorData = []
 
-getAuthorData(authorData)
+with open(filePath) as csvfile: 
+  reader = csv.reader(csvfile)
+  next(reader)
+  for row in reader:
+    getCommitData(row[0], authorData)
 
 file = repo.split('/')[1]
 fileOutput = 'data/authorData_' + file + '.csv'
