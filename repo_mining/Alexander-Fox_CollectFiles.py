@@ -51,8 +51,12 @@ def countfiles(dictfiles, lsttokens, repo):
                 filesjson = shaDetails['files']
                 for filenameObj in filesjson:
                     filename = filenameObj['filename']
-                    dictfiles[filename] = dictfiles.get(filename, 0) + 1
-                    print(filename)
+                    if "." in filename: 
+                      ext = filename.split(".",1)[1]
+                      if ext in repoLangages: 
+                        dictfiles[filename] = dictfiles.get(filename, 0) + 1
+                        print(filename)
+                    
             ipage += 1
     except:
         print("Error receiving data")
