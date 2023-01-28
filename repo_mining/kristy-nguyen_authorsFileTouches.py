@@ -49,6 +49,7 @@ def countfiles(dictfiles, lsttokens, repo):
                 filesjson = shaDetails['files']
                 for filenameObj in filesjson:
                     filename = filenameObj['filename']
+                    print(filename)
                     matches_list = ['java', 'kt', '.cpp']
                     for x in matches_list:
                         if (x in filename):

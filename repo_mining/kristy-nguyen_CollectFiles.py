@@ -72,7 +72,7 @@ print('Total number of files: ' + str(len(dictfiles)))
 
 file = repo.split('/')[1]
 # change this to the path of your file
-fileOutput = 'C:/Users/kln95/cs472-team6/repo_mining/data/kristy-nguyen_file_' + file + '.csv'
+fileOutput = 'C:/Users/kln95/cs472-team6/repo_mining/data/kristy-nguyen_CollectFiles_' + file + '.csv'
 rows = ["Filename", "Touches"]
 fileCSV = open(fileOutput, 'w')
 writer = csv.writer(fileCSV)
