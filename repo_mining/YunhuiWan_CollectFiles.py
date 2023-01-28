@@ -64,7 +64,7 @@ repo = 'scottyab/rootbeer'
 # Remember to empty the list when going to commit to GitHub.
 # Otherwise they will all be reverted and you will have to re-create them
 # I would advise to create more than one token for repos with heavy commits
-lstTokens = ["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"]
+lstTokens = [""]
 
 dictfiles = dict()
 countfiles(dictfiles, lstTokens, repo)
@@ -72,7 +72,7 @@ print('Total number of files: ' + str(len(dictfiles)))
 
 file = repo.split('/')[1]
 # change this to the path of your file
-fileOutput = 'C:/Users/kln95/cs472-team6/repo_mining/data/kristy-nguyen_file_' + file + '.csv'
+fileOutput = 'data/Yunhui_CollectFiles.csv'
 rows = ["Filename", "Touches"]
 fileCSV = open(fileOutput, 'w')
 writer = csv.writer(fileCSV)
