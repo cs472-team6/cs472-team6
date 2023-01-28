@@ -1,0 +1,107 @@
+FileName,Date,Author
+app/src/main/java/com/scottyab/rootbeer/sample/CheckForRootWorker.kt,2021-05-08,Scott Alexander-Bown
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeerNative.java,2015-06-26,Scott Alexander-Bown
+rootbeerlib/src/main/AndroidManifest.xml,2015-06-26,Scott Alexander-Bown
+rootbeerlib/src/main/cpp/CMakeLists.txt,2021-05-22,Scott Alexander-Bown
+rootbeerlib/src/main/cpp/toolChecker.cpp,2021-05-22,Scott Alexander-Bown
+rootbeerlib/src/main/cpp/toolChecker.h,2021-05-22,Scott Alexander-Bown
+rootbeerlib/src/main/jni/Android.mk,2017-03-13,matthew
+rootbeerlib/src/main/jni/Application.mk,2017-03-13,matthew
+rootbeerlib/src/main/jniLibs/arm64-v8a/libtool-checker.so,2016-03-07,biddster
+rootbeerlib/src/main/jniLibs/armeabi-v7a/libtool-checker.so,2015-06-26,Scott Alexander-Bown
+rootbeerlib/src/main/jniLibs/x86/libtool-checker.so,2015-06-30,Matthew Rollings
+rootbeerlib/src/main/jniLibs/x86_64/libtool-checker.so,2016-03-07,biddster
+app/src/main/ic_launcher-playstore.png,2021-05-08,Scott Alexander-Bown
+app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml,2021-05-08,Scott Alexander-Bown
+app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml,2021-05-08,Scott Alexander-Bown
+app/src/main/res/mipmap-hdpi/ic_launcher.png,2015-06-19,Scott Alexander-Bown
+app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png,2021-05-08,Scott Alexander-Bown
+app/src/main/res/mipmap-hdpi/ic_launcher_round.png,2021-05-08,Scott Alexander-Bown
+app/src/main/res/mipmap-mdpi/ic_launcher.png,2015-06-19,Scott Alexander-Bown
+app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png,2021-05-08,Scott Alexander-Bown
+app/src/main/res/mipmap-mdpi/ic_launcher_round.png,2021-05-08,Scott Alexander-Bown
+app/src/main/res/mipmap-xhdpi/ic_launcher.png,2015-06-19,Scott Alexander-Bown
+app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png,2021-05-08,Scott Alexander-Bown
+app/src/main/res/mipmap-xhdpi/ic_launcher_round.png,2021-05-08,Scott Alexander-Bown
+app/src/main/res/mipmap-xxhdpi/ic_launcher.png,2015-06-19,Scott Alexander-Bown
+app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png,2021-05-08,Scott Alexander-Bown
+app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png,2021-05-08,Scott Alexander-Bown
+app/src/main/res/mipmap-xxxhdpi/ic_launcher.png,2015-06-26,Matthew Rollings
+app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png,2021-05-08,Scott Alexander-Bown
+app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png,2021-05-08,Scott Alexander-Bown
+app/src/main/res/values/ic_launcher_background.xml,2021-05-08,Scott Alexander-Bown
+app/src/main/AndroidManifest.xml,2015-06-19,Scott Alexander-Bown
+app/src/main/java/com/scottyab/rootbeer/sample/CheckRootTask.java,2016-07-01,Andy Barber
+app/src/main/java/com/scottyab/rootbeer/sample/MainActivity.java,2015-06-26,Scott Alexander-Bown
+app/src/main/java/com/scottyab/rootbeer/sample/MainActivity.kt,2021-05-08,Scott Alexander-Bown
+app/src/main/java/com/scottyab/rootbeer/sample/RootItemResult.kt,2021-05-08,Scott Alexander-Bown
+app/src/main/java/com/scottyab/rootbeer/sample/RootSampleApp.kt,2021-05-08,Scott Alexander-Bown
+app/src/main/java/com/scottyab/rootbeer/sample/TextViewFont.java,2016-07-01,Andy Barber
+app/src/main/java/com/scottyab/rootbeer/sample/extensions/ViewExtensions.kt,2021-05-08,Scott Alexander-Bown
+app/src/main/java/com/scottyab/rootbeer/sample/ui/ResultIconView.kt,2021-05-08,Scott Alexander-Bown
+app/src/main/java/com/scottyab/rootbeer/sample/ui/RootItemAdapter.kt,2021-05-08,Scott Alexander-Bown
+app/src/main/java/com/scottyab/rootbeer/sample/ui/RootedResultTextView.kt,2021-05-08,Scott Alexander-Bown
+app/src/main/java/com/scottyab/rootbeer/sample/ui/ScopedActivity.kt,2021-05-08,Scott Alexander-Bown
+app/src/main/res/drawable-hdpi/ic_info_outline_white_18dp.png,2016-07-01,Andy Barber
+app/src/main/res/drawable-hdpi/ic_info_outline_white_24dp.png,2016-07-01,Andy Barber
+app/src/main/res/drawable-hdpi/ic_info_outline_white_36dp.png,2016-07-01,Andy Barber
+app/src/main/res/drawable-hdpi/ic_lock_open_white_24dp.png,2016-07-01,Andy Barber
+app/src/main/res/drawable-mdpi/ic_info_outline_white_18dp.png,2016-07-01,Andy Barber
+app/src/main/res/drawable-mdpi/ic_info_outline_white_24dp.png,2016-07-01,Andy Barber
+app/src/main/res/drawable-mdpi/ic_info_outline_white_36dp.png,2016-07-01,Andy Barber
+app/src/main/res/drawable-mdpi/ic_lock_open_white_24dp.png,2016-07-01,Andy Barber
+app/src/main/res/drawable-xhdpi/ic_cross_red_24dp.png,2016-07-01,Andy Barber
+app/src/main/res/drawable-xhdpi/ic_info_outline_white_18dp.png,2016-07-01,Andy Barber
+app/src/main/res/drawable-xhdpi/ic_info_outline_white_24dp.png,2016-07-01,Andy Barber
+app/src/main/res/drawable-xhdpi/ic_info_outline_white_36dp.png,2016-07-01,Andy Barber
+app/src/main/res/drawable-xhdpi/ic_lock_open_white_24dp.png,2016-07-01,Andy Barber
+app/src/main/res/drawable-xhdpi/ic_tick_green_24dp.png,2016-07-01,Andy Barber
+app/src/main/res/drawable-xxhdpi/ic_info_outline_white_18dp.png,2016-07-01,Andy Barber
+app/src/main/res/drawable-xxhdpi/ic_info_outline_white_24dp.png,2016-07-01,Andy Barber
+app/src/main/res/drawable-xxhdpi/ic_info_outline_white_36dp.png,2016-07-01,Andy Barber
+app/src/main/res/drawable-xxhdpi/ic_lock_open_white_24dp.png,2016-07-01,Andy Barber
+app/src/main/res/drawable-xxxhdpi/ic_info_outline_white_18dp.png,2016-07-01,Andy Barber
+app/src/main/res/drawable-xxxhdpi/ic_info_outline_white_24dp.png,2016-07-01,Andy Barber
+app/src/main/res/drawable-xxxhdpi/ic_info_outline_white_36dp.png,2016-07-01,Andy Barber
+app/src/main/res/drawable-xxxhdpi/ic_lock_open_white_24dp.png,2016-07-01,Andy Barber
+app/src/main/res/drawable/ic_check_circle_green_24dp.xml,2021-05-08,Scott Alexander-Bown
+app/src/main/res/drawable/ic_error_circle_outline_red_24dp.xml,2021-05-08,Scott Alexander-Bown
+app/src/main/res/drawable/ic_info_outline_white_24dp.xml,2021-05-08,Scott Alexander-Bown
+app/src/main/res/drawable/ic_lock_open_white_24dp.xml,2021-05-08,Scott Alexander-Bown
+app/src/main/res/drawable/pint_glass.png,2016-07-01,Andy Barber
+app/src/main/res/layout/activity_main.xml,2015-06-19,Scott Alexander-Bown
+app/src/main/res/layout/content_main.xml,2016-07-01,Andy Barber
+app/src/main/res/layout/item_root_check.xml,2021-05-08,Scott Alexander-Bown
+app/src/main/res/menu/menu_main.xml,2015-06-19,Scott Alexander-Bown
+app/src/main/res/values-w820dp/dimens.xml,2015-06-19,Scott Alexander-Bown
+app/src/main/res/values/attrs.xml,2016-07-01,Andy Barber
+app/src/main/res/values/dimens.xml,2015-06-19,Scott Alexander-Bown
+app/src/main/res/values/strings.xml,2015-06-19,Scott Alexander-Bown
+rootbeerlib/src/main/java/com/scottyab/rootbeer/Const.java,2015-06-26,Scott Alexander-Bown
+rootbeerlib/src/main/java/com/scottyab/rootbeer/util/Utils.java,2015-06-30,Scott Alexander-Bown
+rootbeerlib/src/test/java/com/scottyab/rootbeer/RootBeerTest.java,2017-10-31,matthew
+rootbeerlib/src/main/res/values/strings.xml,2015-06-26,Scott Alexander-Bown
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,2015-06-26,Scott Alexander-Bown
+rootbeerlib/src/main/java/com/scottyab/rootbeer/util/QLog.java,2015-06-26,Scott Alexander-Bown
+app/src/androidTest/java/com/scottyab/rootbeer/ApplicationTest.java,2015-06-26,Scott Alexander-Bown
+app/src/main/res/values/styles.xml,2015-06-19,Scott Alexander-Bown
+rootbeerlib/src/androidTest/java/com/scottyab/rootbeer/ApplicationTest.java,2015-06-26,Scott Alexander-Bown
+rootbeerlib/src/main/jniLibs/armeabi/libtool-checker.so,2015-06-30,Matthew Rollings
+rootbeerlib/src/main/jniLibs/mips/libtool-checker.so,2015-06-30,Matthew Rollings
+rootbeerlib/src/main/jniLibs/mips64/libtool-checker.so,2016-03-07,biddster
+rootbeerlib/src/main/jni/toolChecker.cpp,2017-03-13,matthew
+rootbeerlib/src/main/jni/toolChecker.h,2017-03-13,matthew
+app/src/main/res/values/colors.xml,2015-09-16,Scott Alexander-Bown
+app/src/main/assets/SubwayNovella.ttf,2016-07-01,Andy Barber
+app/src/main/res/drawable-hdpi/ic_action_github.png,2015-06-29,Scott Alexander-Bown
+app/src/main/res/drawable-xhdpi/ic_action_github.png,2015-06-29,Scott Alexander-Bown
+app/src/main/res/drawable-xxhdpi/ic_action_github.png,2015-06-29,Scott Alexander-Bown
+rootbeerlib/src/main/jniLibs/armeabi-v7a/libroot-checker.so,2015-06-26,Scott Alexander-Bown
+app/src/main/java/com/scottyab/rootchecker/RootCheck.java,2015-06-19,Scott Alexander-Bown
+app/src/main/java/com/scottyab/rootchecker/Const.java,2015-06-26,Matthew Rollings
+app/src/main/java/com/scottyab/rootchecker/MainActivity.java,2015-06-19,Scott Alexander-Bown
+app/src/main/java/com/scottyab/rootchecker/RootCheckNative.java,2015-06-19,Matthew Rollings
+app/src/main/jniLibs/armeabi-v7a/libroot-checker.so,2015-06-19,Matthew Rollings
+app/src/main/jniLibs/armeabi-v7a/libtool-checker.so,2015-06-19,Matthew Rollings
+app/src/androidTest/java/com/scottyab/rootchecker/ApplicationTest.java,2015-06-19,Scott Alexander-Bown
+app/src/main/java/com/scottyab/rootchecker/util/QLog.java,2015-06-19,Scott Alexander-Bown
