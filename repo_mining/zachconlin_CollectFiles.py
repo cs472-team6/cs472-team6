@@ -64,7 +64,7 @@ repo = 'scottyab/rootbeer'
 # Remember to empty the list when going to commit to GitHub.
 # Otherwise they will all be reverted and you will have to re-create them
 # I would advise to create more than one token for repos with heavy commits
-lstTokens = []
+lstTokens = ["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"]
 
 dictfiles = dict()
 countfiles(dictfiles, lstTokens, repo)
@@ -88,4 +88,3 @@ for filename, count in dictfiles.items():
         bigfilename = filename
 fileCSV.close()
 print('The file ' + bigfilename + ' has been touched ' + str(bigcount) + ' times.')
-

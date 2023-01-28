@@ -83,7 +83,7 @@ repo = 'scottyab/rootbeer'
 # Remember to empty the list when going to commit to GitHub.
 # Otherwise they will all be reverted and you will have to re-create them
 # I would advise to create more than one token for repos with heavy commits
-lstTokens = ["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"]
+lstTokens = []
 
 authors = dict()
 comcnt = 0
@@ -103,3 +103,4 @@ print('Total number of commits: ', comcnt)
 #plt.gray()
 
 #plt.show()
+
