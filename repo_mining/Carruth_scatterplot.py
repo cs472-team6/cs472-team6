@@ -1,24 +1,12 @@
+import numpy as np
+import matplotlib.pyplot as plt
 import json
 import requests
 import csv
-
 import os
 
 if not os.path.exists("data"):
  os.makedirs("data")
-
-with open('languages.json') as languages:
-    languages_list = json.load(languages)
-
-def getFileExtension(filename):
-    filename_split = os.path.splitext(filename)
-    file_ext = filename_split[1]
-    while True:
-        filename_split = os.path.splitext(filename_split[0])
-        if (len(filename_split[1]) > 0):
-            file_ext = filename_split[1] + file_ext
-        else:
-            return file_ext
 
 # GitHub Authentication function
 def github_auth(url, lsttoken, ct):
@@ -37,13 +25,12 @@ def github_auth(url, lsttoken, ct):
 # @dictFiles, empty dictionary of files
 # @lstTokens, GitHub authentication tokens
 # @repo, GitHub repo
-def countfiles(dictfiles, lsttokens, repo):
+def countfiles(authors, lsttokens, repo, comcnt):
     ipage = 1  # url page counter
     ct = 0  # token counter
+    
 
     try:
-        languagesUrl = 'https://api.github.com/repos/' + repo + '/languages'
-        json_languages, ct = github_auth(languagesUrl, lsttokens, ct)
         # loop though all the commit pages until the last returned empty page
         while True:
             spage = str(ipage)
@@ -53,6 +40,7 @@ def countfiles(dictfiles, lsttokens, repo):
             # break out of the while loop if there are no more commits in the pages
             if len(jsonCommits) == 0:
                 break
+            
             # iterate through the list of commits in  spage
             for shaObject in jsonCommits:
                 sha = shaObject['sha']
@@ -60,24 +48,30 @@ def countfiles(dictfiles, lsttokens, repo):
                 shaUrl = 'https://api.github.com/repos/' + repo + '/commits/' + sha
                 shaDetails, ct = github_auth(shaUrl, lsttokens, ct)
                 filesjson = shaDetails['files']
+                comm = shaDetails['commit']
+                commAuthor = comm['author']
+                name = commAuthor['name']
+                date = commAuthor['date'][0:10]
+                namedate = [(name,date)]
+                
+                #print(comcnt)
+
                 for filenameObj in filesjson:
                     filename = filenameObj['filename']
-                    
-                    # get file language
-                    file_extension = getFileExtension(filename)
-                    if (len(file_extension) > 0):
-                        file_extension = file_extension[1:]
-                    file_language = languages_list.get(file_extension, "")
-                    # check if current file language is in repo languages
-                    if (json_languages.get(file_language, -1) > -1):
-                        dictfiles[filename] = dictfiles.get(filename, 0) + 1
-                        print(filename)
+                    if filename.lower().endswith(('.kt', '.java', '.cpp')):
+                        if authors.get(name) is None:
+                            authors[name] = 1
+                            comcnt += 1
+                        else:
+                            authors[name] += 1
+                            comcnt += 1
+                         
+                        print(authors)
             ipage += 1
+
     except:
         print("Error receiving data")
         exit(0)
-
-
 # GitHub repo
 repo = 'scottyab/rootbeer'
 # repo = 'Skyscanner/backpack' # This repo is commit heavy. It takes long to finish executing
@@ -89,27 +83,23 @@ repo = 'scottyab/rootbeer'
 # Remember to empty the list when going to commit to GitHub.
 # Otherwise they will all be reverted and you will have to re-create them
 # I would advise to create more than one token for repos with heavy commits
-lstTokens = [""]
+lstTokens = ["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"]
 
-dictfiles = dict()
-countfiles(dictfiles, lstTokens, repo)
-print('Total number of files: ' + str(len(dictfiles)))
+authors = dict()
+comcnt = 0
+countfiles(authors, lstTokens, repo, comcnt)
+print('Total number of commits: ', comcnt)
 
-file = repo.split('/')[1]
-# change this to the path of your file
-fileOutput = 'data/file_' + file + '.csv'
-rows = ["Filename", "Touches"]
-fileCSV = open(fileOutput, 'w')
-writer = csv.writer(fileCSV)
-writer.writerow(rows)
+#for x in fileArr:
 
-bigcount = None
-bigfilename = None
-for filename, count in dictfiles.items():
-    rows = [filename, count]
-    writer.writerow(rows)
-    if bigcount is None or count > bigcount:
-        bigcount = count
-        bigfilename = filename
-fileCSV.close()
-print('The file ' + bigfilename + ' has been touched ' + str(bigcount) + ' times.')
+
+#x = np.random.random(10)
+#y = np.random.random(10)
+
+#Create a dictionary of files and touches
+#
+
+#plt.scatter(x, y, c=y, s=500)
+#plt.gray()
+
+#plt.show()
