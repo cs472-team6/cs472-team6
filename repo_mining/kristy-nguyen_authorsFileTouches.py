@@ -54,11 +54,9 @@ def countfiles(dictfiles, lsttokens, repo):
                     for x in matches_list:
                         if (x in filename):
                             if dictfiles.get(filename) is None:
-                                #print("if get filename")
                                 author_touches = [(author, date)]
                                 dictfiles[filename] = (1, author_touches)
                             else:
-                                #print("else")
                                 count_new = dictfiles[filename][0]+1
                                 author_touches = dictfiles[filename][1]
                                 author_touches.append((author, date))
