@@ -7,19 +7,6 @@ import os
 if not os.path.exists("data"):
  os.makedirs("data")
 
-with open('languages.json') as languages:
-    languages_list = json.load(languages)
-
-def getFileExtension(filename):
-    filename_split = os.path.splitext(filename)
-    file_ext = filename_split[1]
-    while True:
-        filename_split = os.path.splitext(filename_split[0])
-        if (len(filename_split[1]) > 0):
-            file_ext = filename_split[1] + file_ext
-        else:
-            return file_ext
-
 # GitHub Authentication function
 def github_auth(url, lsttoken, ct):
     jsonData = None
@@ -41,11 +28,9 @@ def countfiles(dictfiles, lsttokens, repo):
     ipage = 1  # url page counter
     ct = 0  # token counter
 
-    try:
-        languagesUrl = 'https://api.github.com/repos/' + repo + '/languages'
-        json_languages, ct = github_auth(languagesUrl, lsttokens, ct)
+    #try:
         # loop though all the commit pages until the last returned empty page
-        while True:
+    while True:
             spage = str(ipage)
             commitsUrl = 'https://api.github.com/repos/' + repo + '/commits?page=' + spage + '&per_page=100'
             jsonCommits, ct = github_auth(commitsUrl, lsttokens, ct)
@@ -59,25 +44,27 @@ def countfiles(dictfiles, lsttokens, repo):
                 # For each commit, use the GitHub commit API to extract the files touched by the commit
                 shaUrl = 'https://api.github.com/repos/' + repo + '/commits/' + sha
                 shaDetails, ct = github_auth(shaUrl, lsttokens, ct)
+                author = shaObject['commit']['author']['name']
+                date = shaObject['commit']['author']['date'][0:10]
                 filesjson = shaDetails['files']
                 for filenameObj in filesjson:
                     filename = filenameObj['filename']
-                    
-                    # get file language
-                    file_extension = getFileExtension(filename)
-                    if (len(file_extension) > 0):
-                        file_extension = file_extension[1:]
-                    file_language = languages_list.get(file_extension, "")
-                    # check if current file language is in repo languages
-                    if (json_languages.get(file_language, -1) > -1):
-                        dictfiles[filename] = dictfiles.get(filename, 0) + 1
-                        print(filename)
+                    print(filename)
+                    matches_list = ['java', 'kt', '.cpp']
+                    for x in matches_list:
+                        if (x in filename):
+                            if dictfiles.get(filename) is None:
+                                author_touches = [(author, date)]
+                                dictfiles[filename] = (1, author_touches)
+                            else:
+                                count_new = dictfiles[filename][0]+1
+                                author_touches = dictfiles[filename][1]
+                                author_touches.append((author, date))
+                                dictfiles[filename] = (count_new, author_touches)
             ipage += 1
-    except:
-        print("Error receiving data")
-        exit(0)
-
-
+    #except:
+        #print("Error receiving data")
+        #exit(0)
 # GitHub repo
 repo = 'scottyab/rootbeer'
 # repo = 'Skyscanner/backpack' # This repo is commit heavy. It takes long to finish executing
@@ -97,8 +84,8 @@ print('Total number of files: ' + str(len(dictfiles)))
 
 file = repo.split('/')[1]
 # change this to the path of your file
-fileOutput = 'data/file_' + file + '.csv'
-rows = ["Filename", "Touches"]
+fileOutput = 'data/kristy-nguyen_authorsFileTouches_' + file + '.csv'
+rows = ["Filename", "Touches", "Name & Date"]
 fileCSV = open(fileOutput, 'w')
 writer = csv.writer(fileCSV)
 writer.writerow(rows)
@@ -106,10 +93,11 @@ writer.writerow(rows)
 bigcount = None
 bigfilename = None
 for filename, count in dictfiles.items():
-    rows = [filename, count]
+    touches = count[0]
+    rows = [filename, count[0], count[1]]
     writer.writerow(rows)
-    if bigcount is None or count > bigcount:
-        bigcount = count
+    if bigcount is None or touches > bigcount:
+        bigcount = touches
         bigfilename = filename
 fileCSV.close()
 print('The file ' + bigfilename + ' has been touched ' + str(bigcount) + ' times.')
