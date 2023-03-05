@@ -1,7 +1,12 @@
+import Navbar from "./components/Navbar/Navbar";
+
 export default function App() {
   return (
     <div>
-      <h1 className='font-bold'>App</h1>
+      {/* Navbar */}
+      <Navbar />
+      {/* SidePanel */}
+      {/* PreviewPanel */}
     </div>
   )
 }
