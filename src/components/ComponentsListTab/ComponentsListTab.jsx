@@ -5,7 +5,7 @@ import { registeredComponents } from "../../utils/registeredComponents";
 export default function ComponentsListTab(){
     
     return (
-        <div className="flex flex-col flex-1 items-center overflow-auto">
+        <div className="flex flex-col flex-1 items-center overflow-auto font-secondary">
             {Array.from(registeredComponents.values()).map(component => {
                 return <ComponentPreview key={component.name} component={component} />;
             })}

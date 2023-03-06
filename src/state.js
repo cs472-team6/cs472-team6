@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import PageOptions from './models/PageOptions';
-import { Tabs } from './utils/utils';
+import { Direction, Tabs } from './utils/utils';
 
 export const SidePanelState = create((set) => ({
     activeTab: Tabs.ComponentOptionsTab,
@@ -24,6 +24,36 @@ export const PageState = create((set) => ({
         });
 
         return ({ componentsList: components });
+
+    }),
+    moveComponent: (id, direction) => set((state) => {
+        let componentIndex = -1;
+        // look for index of specified id (component)
+        for (let i = 0; i < state.componentsList.length; i++){
+            if (state.componentsList[i].id === id){
+                componentIndex = i;
+            }
+        }
+
+        // component not found
+        if (componentIndex === -1){
+            console.log('component not found!!')
+            return ({ componentsList: state.componentsList })
+        }
+        // component already at top or bottom
+        if ((componentIndex === 0 && direction === Direction.UP) || (componentIndex === state.componentsList.length - 1 && direction === Direction.DOWN)){
+            return ({ componentsList: state.componentsList })
+        }
+
+        let components = Array.from(state.componentsList);
+        
+        if (direction === Direction.UP) { // move component up
+            components[componentIndex-1] = components.splice(componentIndex, 1, components[componentIndex-1])[0];
+        } else if (direction === Direction.DOWN) { // move component down
+            components[componentIndex+1] = components.splice(componentIndex, 1, components[componentIndex+1])[0];
+        }
+
+        return ({ componentsList: components })
 
     })
 }))

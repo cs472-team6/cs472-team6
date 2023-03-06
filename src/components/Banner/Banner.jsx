@@ -2,7 +2,7 @@ import starSVG from "./star.svg";
 export default function Banner({options}) {
     const {words, gradient} = options;
     let content = words.split(',').map(word => word.trim()).filter(word => word);
-    console.log(content)
+    
     if (content.length > 0){
         content = content.join(",star,").split(',');
         content.push("star");
