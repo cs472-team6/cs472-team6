@@ -55,5 +55,6 @@ export const PageState = create((set) => ({
 
         return ({ componentsList: components })
 
-    })
+    }),
+    removeComponent: (id) => set((state) => ({ componentsList: state.componentsList.filter(component => component.id !== id) }))
 }))
