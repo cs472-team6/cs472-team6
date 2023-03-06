@@ -1,3 +1,1 @@
-const registeredComponents = new Map([
-    
-])
+export const registeredComponents = new Map();

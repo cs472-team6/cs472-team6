@@ -1,4 +1,5 @@
 import { PageState } from "../../state"
+import {registeredComponents} from "../../utils/registeredComponents";
 
 export default function ComponentOptionsTab(){
     let componentsList = PageState((state) => state.componentsList)
@@ -6,7 +7,10 @@ export default function ComponentOptionsTab(){
         <div className="flex-1">
             {componentsList.map((component) => {
                 let ComponentOptions = registeredComponents.get(component.name)?.optionsComponent ?? null;
-                return <ComponentOptions />
+                if (!ComponentOptions) {
+                    return null;
+                }
+                return <ComponentOptions key={component.id} />;
             })}
         </div>
     )

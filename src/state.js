@@ -10,4 +10,5 @@ export const SidePanelState = create((set) => ({
 export const PageState = create((set) => ({
     componentsList: [],
     pageOptions: new PageOptions({}),
+    addComponent: (component) => set((state) => ({componentsList: [...state.componentsList, component]}))
 }))
