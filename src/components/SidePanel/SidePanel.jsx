@@ -1,5 +1,5 @@
 import { SidePanelState } from "../../state"
-import { Tabs } from "../../utils"
+import { Tabs } from "../../utils/utils"
 import ComponentOptionsTab from "../ComponentOptionsTab/ComponentOptionsTab"
 import ComponentsListTab from "../ComponentsListTab/ComponentsListTab"
 import Icon from "../Icon/Icon"

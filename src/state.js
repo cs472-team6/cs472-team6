@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import PageOptions from './models/PageOptions';
-import { Tabs } from './utils';
+import { Tabs } from './utils/utils';
 
 export const SidePanelState = create((set) => ({
     activeTab: Tabs.ComponentOptionsTab,
