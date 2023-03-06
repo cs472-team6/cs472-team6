@@ -4,7 +4,7 @@ import { registeredComponents } from "../../utils/registeredComponents";
 export default function PreviewPanel() {
     const componentsList = PageState((state) => state.componentsList);
     return (
-        <div className="flex-1 overflow-auto bg-black">
+        <div className="flex-1 overflow-auto dark:bg-black">
             {componentsList.map((component) => {
                 let PreviewComponent = registeredComponents.get(component.name)?.renderComponent ?? null;
                 if (!PreviewComponent) {
