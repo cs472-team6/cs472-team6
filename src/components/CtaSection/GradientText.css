@@ -1,0 +1,7 @@
+.gradient-link {
+  background-image: linear-gradient(to right, #ff9900, #ff5f6d);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-Decoration: "none"
+}
