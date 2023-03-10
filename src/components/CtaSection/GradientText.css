@@ -1,55 +1,61 @@
-.gradient-link{
+.gradient-link {
   /* See the impact of good, conversion-oriented design on your business. */
   width: 1036px;
   height: 252px;
   left: 202px;
   top: 4671px;
-  
+
   /* CTA Heading */
-  
+
   font-family: 'Bai Jamjuree';
   font-style: normal;
   font-weight: 700;
   font-size: 84px;
   line-height: 100%;
   /* or 84px */
-  
+
   display: flex;
   align-items: center;
-  
+
   /* White Primary */
-  
+
   color: black;
-  }
-  
-  .cta-button {
-   /* Let’s Work Together */
+}
+
+.cta-button {
+  /* Let’s Work Together */
   width: 803px;
   height: 84px;
-  
+
   /* CTA Heading */
-  
+
   font-family: 'Bai Jamjuree';
   font-style: normal;
   font-weight: 700;
   font-size: 84px;
   line-height: 100%;
   /* identical to box height, or 84px */
-  
+
   display: flex;
   align-items: center;
-  
+
   /* Gradient */
-  
-  background: linear-gradient(90deg, #B16CEA 14.06%, #FF5E69 44.79%, #FF8A56 71.87%, #FFA84B 100%);
+
+  background: linear-gradient(
+    90deg,
+    #b16cea 14.06%,
+    #ff5e69 44.79%,
+    #ff8a56 71.87%,
+    #ffa84b 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  
+
   /* Inside auto layout */
-  
+
   flex: none;
   order: 0;
   flex-grow: 0;
-  }
+}
   
