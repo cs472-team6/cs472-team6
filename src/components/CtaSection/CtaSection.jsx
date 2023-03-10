@@ -2,9 +2,7 @@ import './GradientText.css';
 
 
 export default function CtaSection({options}) {
-  let link = "www.google.com";
-  let word1 = "See the impoact of good, conversion-oriented design on your business."
-  let word2 = "Let's Work Together"
+  const {link, word1, word2} = options;
   return (
     <div className= "cta-section">
       <div className= "gradient-link">
