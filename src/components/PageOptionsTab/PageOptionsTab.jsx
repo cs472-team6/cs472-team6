@@ -10,7 +10,7 @@ export default function PageOptionsTab(){
     }
     
     return (
-        <div className="flex-1 pl-2 font-secondary">
+        <div className="flex-1 overflow-auto pl-2 font-secondary">
             <label className="block">Title:</label>
             <input className="block mb-3 p-2 rounded-lg" type="text" name="title" value={pageOptions.title} onChange={handleChange} />
             <label className="block">Icon:</label>
