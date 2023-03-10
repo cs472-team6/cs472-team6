@@ -7,6 +7,11 @@ export const SidePanelState = create((set) => ({
     setTab: (newTab) => set({activeTab: newTab})
 }))
 
+export const SidePanelVisibility = create((set) => ({
+    isVisible: false,
+    setVisibility: (isVisible) => set(() => ({ isVisible: isVisible }))
+}))
+
 export const PageState = create((set) => ({
     componentsList: [],
     pageOptions: new PageOptions({}),
