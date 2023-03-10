@@ -2,14 +2,17 @@ import './GradientText.css';
 
 
 export default function CtaSection({options}) {
-  const {link, word1, word2} = options;
-  
+  let link = "www.google.com";
+  let word1 = "See the impoact of good, conversion-oriented design on your business."
+  let word2 = "Let's Work Together"
   return (
     <div className= "cta-section">
-      <div style={{ textAlign: "left", fontSize: '18px', fontWeight: 'bold', display: 'flex', flexDirection: 'column', width: '100%', height: '100%',flexGrow: 1}}>
+      <div className= "gradient-link">
+      <div className={`bg-white text-black dark:bg-black dark:text-white`}>
       <h2>{word1}</h2> 
-      <a href={link} style={{fontSize: '18px', fontWeight: 'bold' }}><span className="gradient-link">{word2}</span></a>
       </div>
+      </div>
+      <a href={link} className="cta-button">{word2}</a>
     </div>
   );
 }
